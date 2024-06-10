@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto inventario de Equipos</title>
+    <title>Inventario de Equipos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
+    <h1>Inventario de Equipos</h1>
+    <div id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre del equipo">
+        <input type="text" id="descripcion" placeholder="Descripción">
+        <input type="number" id="cantidad" placeholder="Cantidad">
+        <button onclick="agregarEquipo()">Agregar Equipo</button>
+    </div>
+    <h2>Listado de Equipos</h2>
+    <ul id="listaEquipos"></ul>
 
-    <h1>Bienvenido a la página de manejo de equipos</h1>
-    
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>
